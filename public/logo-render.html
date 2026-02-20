@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentien Labs LLC Logo</title>
+    <style>
+        :root {
+            --bg-color: #0A1628;
+            --accent-color: #00E5FF;
+            --glow-color: rgba(0, 229, 255, 0.6);
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1024px;
+            height: 1024px;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Grid/Circuit Pattern */
+        .grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--bg-color) 2px, transparent 2px),
+                linear-gradient(90deg, var(--bg-color) 2px, transparent 2px);
+            background-size: 50px 50px;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .grid-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 800px;
+            height: 800px;
+            border-radius: 40px;
+            background: rgba(10, 22, 40, 0.4);
+            border: 2px solid rgba(0, 229, 255, 0.3);
+            box-shadow: 0 0 100px rgba(0, 229, 255, 0.1), inset 0 0 40px rgba(0, 229, 255, 0.05);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Logo Icon */
+        .icon-container {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 15px var(--glow-color));
+        }
+
+        /* Typography */
+        h1 {
+            color: #FFFFFF;
+            font-size: 100px;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 4px;
+            line-height: 0.9;
+            text-shadow: 0 0 20px var(--glow-color);
+        }
+        
+        h2 {
+            color: var(--accent-color);
+            font-size: 60px;
+            font-weight: 600;
+            margin: 20px 0 0 0;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            text-shadow: 0 0 30px var(--accent-color);
+        }
+
+        /* Decorative Elements */
+        .corner {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+        
+        .tl { top: 40px; left: 40px; border-right: none; border-bottom: none; }
+        .tr { top: 40px; right: 40px; border-left: none; border-bottom: none; }
+        .bl { bottom: 40px; left: 40px; border-right: none; border-top: none; }
+        .br { bottom: 40px; right: 40px; border-left: none; border-top: none; }
+
+    </style>
+</head>
+<body>
+    <div class="grid"></div>
+    <svg class="grid-lines" viewBox="0 0 1024 1024">
+        <!-- Random tech lines -->
+        <defs>
+            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="transparent" />
+                <stop offset="50%" stop-color="#00E5FF" />
+                <stop offset="100%" stop-color="transparent" />
+            </linearGradient>
+        </defs>
+        <path d="M0 200 H1024" stroke="url(#lineGrad)" stroke-width="1" opacity="0.3" />
+        <path d="M0 824 H1024" stroke="url(#lineGrad)" stroke-width="1" opacity="0.3" />
+        <path d="M200 0 V1024" stroke="url(#lineGrad)" stroke-width="1" opacity="0.3" />
+        <path d="M824 0 V1024" stroke="url(#lineGrad)" stroke-width="1" opacity="0.3" />
+        
+        <!-- Nodes -->
+        <circle cx="200" cy="200" r="6" fill="#00E5FF" opacity="0.6" />
+        <circle cx="824" cy="200" r="6" fill="#00E5FF" opacity="0.6" />
+        <circle cx="200" cy="824" r="6" fill="#00E5FF" opacity="0.6" />
+        <circle cx="824" cy="824" r="6" fill="#00E5FF" opacity="0.6" />
+    </svg>
+
+    <div class="container">
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+
+        <div class="icon-container">
+            <svg viewBox="0 0 200 200">
+                <!-- Outer Hexagon -->
+                <path d="M100 20 L170 60 L170 140 L100 180 L30 140 L30 60 Z" fill="none" stroke="#00E5FF" stroke-width="4" stroke-opacity="0.8" />
+                
+                <!-- Inner connections (Neural/Circuit) -->
+                <circle cx="100" cy="100" r="20" fill="#00E5FF" fill-opacity="0.2" stroke="#00E5FF" stroke-width="2" />
+                <circle cx="100" cy="100" r="8" fill="#FFFFFF" />
+                
+                <path d="M100 80 L100 20" stroke="#00E5FF" stroke-width="2" />
+                <path d="M100 120 L100 180" stroke="#00E5FF" stroke-width="2" />
+                <path d="M82 90 L30 60" stroke="#00E5FF" stroke-width="2" />
+                <path d="M118 90 L170 60" stroke="#00E5FF" stroke-width="2" />
+                <path d="M82 110 L30 140" stroke="#00E5FF" stroke-width="2" />
+                <path d="M118 110 L170 140" stroke="#00E5FF" stroke-width="2" />
+
+                <!-- Nodes on Hexagon -->
+                <circle cx="100" cy="20" r="4" fill="#00E5FF" />
+                <circle cx="170" cy="60" r="4" fill="#00E5FF" />
+                <circle cx="170" cy="140" r="4" fill="#00E5FF" />
+                <circle cx="100" cy="180" r="4" fill="#00E5FF" />
+                <circle cx="30" cy="140" r="4" fill="#00E5FF" />
+                <circle cx="30" cy="60" r="4" fill="#00E5FF" />
+            </svg>
+        </div>
+
+        <h1>SENTIEN<br>LABS</h1>
+        <h2>LLC</h2>
+    </div>
+</body>
+</html>

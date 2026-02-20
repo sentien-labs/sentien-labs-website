@@ -3,10 +3,12 @@ export default function Home() {
     <main className="min-h-dvh flex flex-col items-center justify-center px-6">
       {/* Logo / Brand */}
       <div className="text-center space-y-6 max-w-2xl">
-        <div className="inline-flex items-center gap-3">
-          <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-[#00E5FF] to-[#0099AA] flex items-center justify-center text-2xl font-bold text-black">
-            S
-          </div>
+        <div className="flex flex-col items-center gap-4">
+          <img
+            src="/pfp-logo-llc.png"
+            alt="Sentien Labs LLC"
+            className="h-32 w-32 rounded-2xl shadow-lg shadow-[#00E5FF]/20"
+          />
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
             Sentien <span className="text-[#00E5FF]">Labs</span>
           </h1>

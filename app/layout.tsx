@@ -4,6 +4,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Sentien Labs — AI · Finance · Future",
   description: "AI-native company building intelligent products at the intersection of artificial intelligence, finance, and the future.",
+  icons: {
+    icon: "/pfp-logo-llc.png",
+    apple: "/pfp-logo-llc.png",
+  },
+  openGraph: {
+    images: ["/pfp-logo-llc.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
