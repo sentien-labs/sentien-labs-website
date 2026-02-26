@@ -4,3 +4,6 @@ out/
 .vercel
 *.tsbuildinfo
 next-env.d.ts
+
+# Email subscriber data (local dev only — use ConvertKit/DB in production)
+data/subscribers.json

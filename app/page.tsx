@@ -62,7 +62,7 @@ export default function Home() {
         <a href="https://x.com/SentienLabs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
           𝕏 Twitter
         </a>
-        <a href="https://github.com/SentienLabs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+        <a href="https://github.com/sentien-labs" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
           GitHub
         </a>
         <a href="https://t.me/VerdictSwarmBot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
