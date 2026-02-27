@@ -17,6 +17,36 @@ const supportPackages = [
   },
 ];
 
+const industries = [
+  {
+    icon: "🏠",
+    name: "Home Services",
+    description: "Automate dispatch, quoting, and follow-up workflows to increase job conversion.",
+  },
+  {
+    icon: "💼",
+    name: "Professional Services",
+    description: "Streamline client onboarding, documentation, and internal knowledge operations.",
+  },
+  {
+    icon: "🛍️",
+    name: "Retail",
+    description: "Improve inventory, customer support, and campaign execution with AI assistants.",
+  },
+  {
+    icon: "🏗️",
+    name: "Construction",
+    description: "Reduce project delays with smarter scheduling, reporting, and field communication.",
+  },
+];
+
+const processSteps = [
+  "Tell us your pain point",
+  "We analyze & design",
+  "Free implementation",
+  "Pay only if it works",
+];
+
 export default function Home() {
   return (
     <main className="min-h-dvh bg-[#0A1628] text-white">
@@ -37,7 +67,7 @@ export default function Home() {
             href="mailto:hello@sentienlabs.io"
             className="rounded-lg border border-[#00E5FF]/45 px-4 py-2 text-sm font-medium text-[#00E5FF] transition hover:bg-[#00E5FF]/10"
           >
-            Book a Call
+            Schedule a Free Consultation
           </a>
         </header>
 
@@ -111,15 +141,93 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/[0.02] p-8 md:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#00E5FF]">Products</p>
+          <div className="mt-5 grid gap-5 md:grid-cols-2">
+            <a
+              href="https://vswarm.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-[#00E5FF]/35 bg-[#081427] p-6 transition hover:bg-[#00E5FF]/10"
+            >
+              <p className="text-sm text-[#00E5FF]">Featured Product</p>
+              <h3 className="mt-1 text-2xl font-semibold">VerdictSwarm</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">
+                AI crypto security platform that uses multi-agent consensus to detect risks,
+                scams, and potential rug pulls before users commit capital.
+              </p>
+              <span className="mt-4 inline-flex text-sm font-medium text-[#00E5FF]">Visit vswarm.io →</span>
+            </a>
+
+            <div className="rounded-2xl border border-white/10 bg-[#081427] p-6">
+              <p className="text-sm text-white/60">Roadmap</p>
+              <h3 className="mt-1 text-2xl font-semibold">More products coming soon</h3>
+              <p className="mt-3 text-sm leading-relaxed text-white/70">
+                We are actively building additional AI tools for operations, automation,
+                and decision support across multiple industries.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/[0.02] p-8 md:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#00E5FF]">Industries We Serve</p>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {industries.map((industry) => (
+              <article key={industry.name} className="rounded-2xl border border-white/10 bg-[#081427] p-5">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl" aria-hidden>
+                    {industry.icon}
+                  </span>
+                  <div>
+                    <h3 className="text-lg font-semibold">{industry.name}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-white/70">{industry.description}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/[0.02] p-8 md:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#00E5FF]">How It Works</p>
+          <div className="mt-6 grid gap-4 md:grid-cols-4">
+            {processSteps.map((step, index) => (
+              <article key={step} className="rounded-2xl border border-white/10 bg-[#081427] p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#00E5FF]">Step {index + 1}</p>
+                <p className="mt-2 text-base font-medium text-white/90">{step}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-12 rounded-3xl border border-[#00E5FF]/35 bg-[#00E5FF]/10 p-8 md:p-10">
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#00E5FF]">Start Here</p>
+              <h2 className="mt-2 text-3xl font-semibold md:text-4xl">Schedule a Free Consultation</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/80 md:text-base">
+                Tell us where your team is losing time. We will identify the best AI opportunity,
+                implement the first win for free, and prove value before you pay.
+              </p>
+            </div>
+            <a
+              href="mailto:hello@sentienlabs.io?subject=Free%20AI%20Consultation"
+              className="inline-flex items-center justify-center rounded-xl bg-[#00E5FF] px-6 py-3 text-sm font-semibold text-[#051321] transition hover:brightness-95"
+            >
+              Schedule a Free Consultation
+            </a>
+          </div>
+        </section>
+
         <footer className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/45 md:flex-row md:items-center">
           <p>© 2026 Sentien Labs LLC. Professional AI consulting for modern businesses.</p>
-          <div className="flex gap-5">
-            <a href="https://x.com/SentienLabs" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-              X
-            </a>
-            <a href="https://github.com/sentien-labs" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-              GitHub
-            </a>
+          <div className="flex flex-wrap gap-5">
+            <a href="https://sentienlabs.io" className="hover:text-white">Website</a>
+            <a href="https://vswarm.io" target="_blank" rel="noopener noreferrer" className="hover:text-white">VerdictSwarm</a>
+            <a href="https://x.com/SentienLabs" target="_blank" rel="noopener noreferrer" className="hover:text-white">X</a>
+            <a href="https://github.com/sentien-labs" target="_blank" rel="noopener noreferrer" className="hover:text-white">GitHub</a>
+            <a href="mailto:hello@sentienlabs.io" className="hover:text-white">Contact</a>
           </div>
         </footer>
       </div>
